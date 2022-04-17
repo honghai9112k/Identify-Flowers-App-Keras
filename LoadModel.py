@@ -35,3 +35,7 @@ for entry in entries:
               int(predictions[se]*100), "% chance to be", datanames[se], ". Now get lost.")
         result.append(datanames[fi])
 print('result',result)
+
+file = open("result.txt", "w+")
+file.write('\n'.join(result))
+file.close()
