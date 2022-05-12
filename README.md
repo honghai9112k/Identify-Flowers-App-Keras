@@ -3,7 +3,7 @@ A flower image classification program based on python and keras.
 
 This project has two parts, (i) training part and (ii) GUI part or Run 'python LoadModel' to test 1 folder include flower imgs.
 
-Before running the python files, make sure pip installed the following packages: `tensorflow`, `keras`, `PyQt5`.
+Before running the python files, make sure pip installed the following packages: `tensorflow`, `keras`, `PyQt5`.(Python 3.10.4)
 
 ### Part (i) Training:
 

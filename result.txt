@@ -1,5 +1,5 @@
-astilbe
-astilbe
-astilbe
-bellflower
-calendula
+Try1.jpg: bellflower
+Try2.jpg: tulip
+Try3.jpg: bellflower
+Try4.jpg: bellflower
+Try5.jpg: calendula

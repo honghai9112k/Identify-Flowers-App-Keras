@@ -8,15 +8,15 @@ import numpy as np
 datanames = ("astilbe", "bellflower", "black-eyed susan",
              "calendula", "california poppy", "tulip")
 datanames = os.listdir('DataSet')
-model = keras.models.load_model('Model_4.h5')
+model = keras.models.load_model('Model_34.h5')
 image_size = (180, 180)
 # Lấy ra folder ảnh TestFlowers
-entries = os.listdir('SampleFlowers/')
+entries = os.listdir('TestFlowers/')
 result = []
 # Lặp qua từng file
 for entry in entries:
-    print('./SampleFlowers/' + entry)
-    file_path = './SampleFlowers/' + entry
+    print('./TestFlowers/' + entry)
+    file_path = './TestFlowers/' + entry
     # Add kết quả vào mảng
     img = keras.preprocessing.image.load_img(file_path, target_size=image_size)
     img_array = keras.preprocessing.image.img_to_array(img)
@@ -29,11 +29,11 @@ for entry in entries:
     if predictions[fi]+predictions[se] < 0.6:
         print(
             "Unforturnatly this might not be a garden flower, find something else to play.")
-        result.append('null') 
+        result.append(entry + ': '+'null') 
     else:
         print("Well, I can tell you that it is", int(predictions[fi]*100), "% chance to be", datanames[fi], ", and", 
               int(predictions[se]*100), "% chance to be", datanames[se], ". Now get lost.")
-        result.append(datanames[fi])
+        result.append(entry + ': '+ datanames[fi])
 print('result',result)
 
 file = open("result.txt", "w+")

@@ -66,7 +66,7 @@ train_ds = train_ds.prefetch(buffer_size=32)
 val_ds = val_ds.prefetch(buffer_size=32)
 
 def make_model(input_shape, num_classes):
-    inputs = keras.Input(shape=input_shape)
+    inputs = keras.Input(shape=input_shape) # khởi tạo một tensor Keras.
     # Image augmentation block
     x = data_augmentation(inputs)
 
